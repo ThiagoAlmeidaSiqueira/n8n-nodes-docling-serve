@@ -1,9 +1,26 @@
 {
   "name": "n8n-nodes-docling-serve",
-  "version": "0.1.0",
-  "description": "Custom node for n8n to interact with Docling Serve API",
-  "main": "nodes/DoclingServe.node.ts",
-  "author": "Seu Nome",
+  "version": "1.0.0",
+  "description": "Custom node for n8n to convert documents using Docling Serve API",
+  "main": "dist/nodes/DoclingServe.node.js",
+  "scripts": {
+    "build": "tsc",
+    "start": "n8n"
+  },
+  "keywords": [
+    "n8n",
+    "workflow",
+    "automation",
+    "docling",
+    "custom-node"
+  ],
+  "author": "Thiago Almeida Siqueira",
   "license": "MIT",
-  "dependencies": {}
+  "dependencies": {
+    "n8n-workflow": "^1.52.1"
+  },
+  "devDependencies": {
+    "typescript": "^5.9.2",
+    "@types/node": "^20.11.30"
+  }
 }
