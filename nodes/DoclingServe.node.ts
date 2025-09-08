@@ -11,13 +11,13 @@ export class DoclingServe implements INodeType {
 		name: 'doclingServe',
 		group: ['transform'],
 		version: 1,
-		description: 'Converte documentos usando a API Docling Serve',
+		description: 'Converte documentos com a API Docling Serve',
 		defaults: {
 			name: 'Docling Serve',
 			color: '#772244',
 		},
-		inputs: ['main'] as any,
-		outputs: ['main'] as any,
+		inputs: ['main'],
+		outputs: ['main'],
 		icon: 'fa:file-alt',
 		properties: [
 			{
