@@ -16,8 +16,8 @@ export class DoclingServe implements INodeType {
 			name: 'Docling Serve',
 			color: '#772244',
 		},
-		inputs: ['main'],
-		outputs: ['main'],
+		inputs: ['main'] as any,
+		outputs: ['main'] as any,
 		icon: 'fa:file-alt',
 		properties: [
 			{
