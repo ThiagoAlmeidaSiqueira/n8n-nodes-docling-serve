@@ -4,8 +4,7 @@
   "description": "Custom node for n8n to convert documents using Docling Serve API",
   "main": "dist/nodes/DoclingServe.node.js",
   "scripts": {
-    "build": "tsc",
-    "start": "n8n"
+    "build": "tsc"
   },
   "keywords": [
     "n8n",
