@@ -1,0 +1,9 @@
+{
+  "name": "n8n-nodes-docling-serve",
+  "version": "0.1.0",
+  "description": "Custom node for n8n to interact with Docling Serve API",
+  "main": "nodes/DoclingServe.node.ts",
+  "author": "Seu Nome",
+  "license": "MIT",
+  "dependencies": {}
+}
