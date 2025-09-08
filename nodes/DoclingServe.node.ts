@@ -97,7 +97,6 @@ export class DoclingServe implements INodeType {
 		const returnData: INodeExecutionData[] = [];
 
 		for (let i = 0; i < items.length; i++) {
-			// Captura parâmetros
 			const endpointType = this.getNodeParameter('endpointType', i) as string;
 			const endpointUrlRaw = this.getNodeParameter('endpointUrl', i) as string;
 			const endpointUrl = endpointType === 'file'
@@ -121,7 +120,6 @@ export class DoclingServe implements INodeType {
 
 			let response;
 			if (endpointType === 'source') {
-				// Monta payload para /source
 				const sources = [];
 				if (pdfUrlsRaw) {
 					for (const url of pdfUrlsRaw.split(',')) {
@@ -149,7 +147,6 @@ export class DoclingServe implements INodeType {
 					json: true,
 				});
 			} else {
-				// Monta payload para /file (upload binário)
 				const formData: Record<string, any> = {
 					options: JSON.stringify({
 						from_formats: fromFormats,
@@ -179,7 +176,6 @@ export class DoclingServe implements INodeType {
 					throw new Error('Nenhum arquivo binário ou base64 fornecido para upload');
 				}
 
-				// Adiciona outras opções avançadas
 				for (const [k, v] of Object.entries(advancedOptions)) {
 					formData[k] = typeof v === 'string' ? v : JSON.stringify(v);
 				}
